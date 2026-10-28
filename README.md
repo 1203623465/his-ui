@@ -1,4 +1,4 @@
-# client 前端项目文档
+# His.Ui 前端项目文档
 
 > 面向学习的 Vue 3 + TypeScript + Element Plus 后台管理系统前端。
 
@@ -29,7 +29,7 @@ HIS 管理系统的**浏览器前端**：提供登录、仪表盘、科室/医�
 ## 三、目录结构（逐项说明）
 
 ```
-client/
+His.Ui/
 ├── index.html                  # HTML 入口（标题等）
 ├── vite.config.ts              # Vite 配置：端口、allowedHosts、/api 代理到后端 5080
 ├── tailwind.config.js          # Tailwind 配置（自定义医疗主题色）
@@ -136,7 +136,7 @@ client/
 ## 六、运行与构建
 
 ```bash
-cd client
+cd His.Ui
 npm install          # 若全局配置了 omit=dev，项目 .npmrc 已覆盖
 npm run dev          # http://localhost:5173（/api 已代理到 5080）
 npm run build        # 生产构建，产物在 dist/
