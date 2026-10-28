@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #2F6FED;
+    --teal: #14B8A6;
+    --sidebar: #1F2D3D;
+    --page-bg: #F5F7FA;
+    --text-main: #303133;
+    --text-sub: #606266;
+    --success: #67C23A;
+    --warning: #E6A23C;
+    --danger: #F56C6C;
+    --info: #909399;
+  }
+
+  body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-main);
+    background-color: var(--page-bg);
+  }
+}
+
+/* Element Plus 主色与医疗主题对齐 */
+:root {
+  --el-color-primary: #2F6FED;
+}
+
+/* 深色侧边栏菜单样式 */
+.his-sidebar .el-menu {
+  border-right: none;
+  background-color: transparent;
+}
+
+.his-sidebar .el-menu-item,
+.his-sidebar .el-sub-menu__title {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.his-sidebar .el-menu-item:hover,
+.his-sidebar .el-sub-menu__title:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.his-sidebar .el-menu-item.is-active {
+  background: linear-gradient(90deg, #2F6FED 0%, #14B8A6 100%);
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* 页面切换过渡 */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.25s ease;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateX(12px);
+}
+
+.fade-slide-leave-to {
+  opacity: 0;
+}
+
+/* 移动端适配：仅作用于窄屏，桌面端表现不变 */
+@media (max-width: 768px) {
+  /* 顶栏与内容区留白收紧 */
+  .el-header {
+    --el-header-padding: 0 12px;
+  }
+
+  .el-main {
+    --el-main-padding: 8px;
+  }
+
+  /* 弹窗、确认框、消息条不超出屏幕 */
+  .el-dialog {
+    max-width: 94vw;
+    margin-top: 8vh !important;
+  }
+
+  .el-message-box {
+    max-width: 92vw;
+    width: auto !important;
+  }
+
+  .el-message {
+    min-width: 0;
+    max-width: 90vw;
+  }
+
+  /* 页面顶部工具栏在窄屏自动换行 */
+  .el-main .flex.items-center.justify-between,
+  .el-main .flex.items-center.gap-3 {
+    flex-wrap: wrap;
+  }
+
+  /* 分页精简，避免横向溢出 */
+  .el-pagination {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 8px;
+  }
+
+  .el-pagination__total,
+  .el-pagination__sizes {
+    display: none;
+  }
+
+  .el-pager li {
+    min-width: 28px;
+  }
+
+  /* 侧滑菜单：铺满高度、去掉默认内边距 */
+  .his-drawer {
+    background: var(--sidebar);
+  }
+
+  .his-drawer .el-drawer__body {
+    padding: 0;
+  }
+}
