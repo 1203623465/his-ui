@@ -10,7 +10,7 @@ const route = useRoute()
   <div class="his-sidebar h-full flex flex-col bg-sidebar">
     <div class="flex items-center justify-center h-16 border-b border-white/10 shrink-0">
       <el-icon :size="26" color="#14B8A6"><FirstAidKit /></el-icon>
-      <span v-if="!collapsed" class="ml-2 text-white font-semibold text-base tracking-wide">机器猫医疗 HIS</span>
+      <span v-if="!collapsed" class="ml-2 text-white font-semibold text-base tracking-wide">医疗 HIS</span>
     </div>
     <el-scrollbar class="flex-1">
       <el-menu :default-active="route.path" :collapse="collapsed" router class="px-2 pt-2">

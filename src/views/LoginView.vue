@@ -43,7 +43,7 @@ async function handleLogin() {
         <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-teal flex items-center justify-center shadow-lg shadow-primary/30">
           <el-icon :size="34" color="#fff"><FirstAidKit /></el-icon>
         </div>
-        <h1 class="mt-4 text-[22px] font-semibold text-gray-800">机器猫医疗 HIS</h1>
+        <h1 class="mt-4 text-[22px] font-semibold text-gray-800">医疗 HIS</h1>
         <p class="mt-1 text-sm text-gray-500">医院信息管理系统 · 演示环境</p>
       </div>
 

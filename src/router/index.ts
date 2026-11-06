@@ -43,7 +43,7 @@ router.beforeEach((to) => {
   if (to.path !== '/login' && !loggedIn) {
     return '/login'
   }
-  document.title = to.meta.title ? `${to.meta.title as string} - 机器猫医疗 HIS` : '机器猫医疗 HIS 管理系统'
+  document.title = to.meta.title ? `${to.meta.title as string} - 医疗 HIS` : '医疗 HIS 管理系统'
   return true
 })
 
